@@ -21,7 +21,7 @@
     //1、所有的HTML标签(包含document、window)都有一个自己所属的类,都有一套原型查找模式...
     //自己回去把常用的标签、document、window所属类的层级关系总结下来，在每一级中学习它的常用的属性和方法
     //2、我们说getElementById、getElementsByTagName、createElement的上下文只能是document,回去后用面向对象的思想去理解为什么?
-
+~
 
     //二、数据类型和面向对象
     //    var ary = [12, 23, 34];
@@ -83,27 +83,28 @@
     //    console.log(Fn.num);//->20  console.log(Fn["num"])
 
 
-    var num = 0;
-    function Fn(num) {
-        arguments[0] = 100;
-        this.num = 200;
-        console.log(num);
-        console.log(this.num);
-        return num;
-    }
-    Fn.num = 400;
-    Fn.prototype.num = 300;
-    Fn.prototype.getNum = function () {
-        console.log(this.num);
-    };
-    var f = new Fn(num);
-    console.log(f.num);
-    f.getNum();
-    Fn.prototype.getNum();
-    console.log(num);
-    var n = Fn(num);
-    console.log(n);
-    console.log(num);
+//    var num = 0;
+//    function Fn(num) {
+//        arguments[0] = 100;
+//        this.num = 200;
+//        console.log(num);
+//        console.log(this.num);
+//        return num;
+//    }
+//    Fn.num = 400;
+//    Fn.prototype.num = 300;
+//    Fn.prototype.getNum = function () {
+//        console.log(this.num);
+//    };
+//    var f = new Fn(num);
+//    console.log(f.num);
+//    f.getNum();
+//    Fn.prototype.getNum();
+//    console.log(num);
+//    var n = Fn(num);
+//    console.log(n);
+//    console.log(num);
+
 </script>
 </body>
 </html>

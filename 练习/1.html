@@ -5,8 +5,89 @@
     <title></title>
 </head>
 <body>
+<div id="div1"></div>
 <script type="text/javascript">
-    function
+    //    var oDiv=document.getElementById("div1");
+    //    console.dir(oDiv)
+    //    var str = "珠峰";
+
+    //var str2 = new String("珠峰")
+    //console.log(str2);
+    //Array.prototype.slice = function () {
+    //      console.log("ok");
+    //   };
+    //[].slice();fn.call(12)
+    //fn.call(12)
+    //console.log(fn.call(12))
+    //    var ary = [12, 23, 34, 24, 35, 15, 26];
+    //    ary.sort(function(a,b){return a-b})
+    //    console.log(ary);
+    //    var max = min = ary[0];
+    //    for (var i = 0; i < ary.length; i++) {
+    //        var cur = ary[i];
+    //        cur > max ? max = cur : null
+    //        cur < max ? min = cur : null
+    //    }
+    //    console.log(max, min);
+    //    function avgFn() {
+    //        var ary = [];
+    //        for (var i = 0; i < arguments.length; i++) {
+    ////            ary.push(arguments[i]);
+    //            ary[ary.length] = arguments[i];
+    //
+    //        }
+    //
+    //        ary.sort(function (a, b) {
+    //            return a - b
+    //        });
+    //     ary.shift()
+    //        ary.pop()
+    //        console.log(ary)
+    //        return (eval(ary.join("+"))/ary.length).toFixed(2)
+    //
+    //    }
+    //    var res=avgFn(2, 9, 0, 4, 5)
+    //    console.log(res)
+    function avgFn() {
+        var ary = Array.prototype.slice.call(arguments, 0)
+        //argument是类数组，有和数组一样的形式，但是没有类数组的属性，现在将数组的属性slice给argument,让其拥有slice的属性，可以参照匡仁术的讲解尽管例子是数组但是，可以看成类数组argument call改变this
+//        var ary = [].slice.call(arguments, 0);
+        ary.sort(function (a, b) {
+            return a - b;
+        });
+        ary.shift();
+        ary.length--;
+        return (eval(ary.join("+")) / ary.length).toFixed(2)
+    }
+
+    var res = avgFn(2, 9, 0, 4, 5);
+    console.log(res);
+
+
+    function avgFn() {
+            //1、借用数组的slice方法实现将类数组转换为数组
+           // var ary = Array.prototype.slice.call(arguments, 0);
+//            var ary=[].slice.call(arguments,0);
+//            ary.sort(function (a, b) {
+//                return a - b;
+//            });
+//            ary.shift();
+//            ary.length--;
+//            return (eval(ary.join("+")) / ary.length).toFixed(2);
+//        }
+//
+//        var res = avgFn(2, 9, 0, 4, 5);
+//        console.log(res);
+//
+//
+//    var ary = [12, 23, 34, 24, 35, 15, 26];
+//    var min = Math.min.apply(null, ary);
+//    console.log(min);
+//    var max = Math.max.apply(null, ary);
+//    console.log(min, max);
+    str="12345";
+        substr
+
 </script>
 </body>
 </html>
